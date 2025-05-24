@@ -69,3 +69,21 @@ print(g.keys())
 print(g.values())
 #使用 items 方法可以获取到字典中所有的键值对
 print(g.items())
+
+
+#合法的 key 类型
+#不是所有的类型都可以作为字典的 key.
+#字典本质上是一个 哈希表, 哈希表的 key 要求是 "可哈希的", 也就是可以计算出一个哈希值
+
+##可哈希的类型
+print(hash(0))
+print(hash(3.14))
+print(hash('hello'))
+print(hash(True))
+print(hash(()))
+
+#不可哈希的类型
+print(hash([1, 2, 3]))
+print(hash({ 'id': 1 }))
+
+#总结:不可变的对象,一般都是可哈希的; 可变的对象一般就是不可哈希的
