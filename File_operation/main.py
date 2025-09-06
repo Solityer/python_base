@@ -29,7 +29,6 @@ f3 = open('d:/CODE/python_base/File_operation/test.txt','a')
 f3.write('world')
 f3.close()
 
-
 ##读文件
 #读文件内容需要使用 'r' 的方式打开文件
 f4 = open('d:/CODE/python_base/File_operation/test1.txt', 'r', encoding = 'utf8')
@@ -37,6 +36,7 @@ f4 = open('d:/CODE/python_base/File_operation/test1.txt', 'r', encoding = 'utf8'
 result1 = f4.read(2)
 print(result1)
 f4.close()
+
 #按行读取
 f5 = open('d:/CODE/python_base/File_operation/test1.txt', 'r', encoding = 'utf8')
 for line in f5:
@@ -48,7 +48,6 @@ f6 = open('d:/CODE/python_base/File_operation/test1.txt', 'r', encoding = 'utf8'
 lines = f6.readlines()
 print(lines)
 f6.close()
-
 
 ##上下文管理器
 #打开文件之后, 是容易忘记关闭的. Python 提供了 上下文管理器 , 来帮助程序猿自动关闭文件.
